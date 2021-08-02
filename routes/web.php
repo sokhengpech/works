@@ -27,4 +27,4 @@ require __DIR__.'/auth.php';
 Route::get('/works', [WorkController::class, 'index']);
 Route::get('/works/create', [WorkController::class, 'create']);
 Route::post('/works', [WorkController::class, 'store']);
-Route::get('/works/show', [WorkController::class, 'show/{id}']);
+Route::get('/works/{id}', [WorkController::class, 'show']);

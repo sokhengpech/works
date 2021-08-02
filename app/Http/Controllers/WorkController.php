@@ -30,8 +30,9 @@ class WorkController extends Controller
         return redirect('/works');
     }
 
-    public function show()
+    public function show($id)
     {
-        return view('works.show');
+        $works = Work::find($id);
+        return view('works.show', compact('works'));
     }
 }
