@@ -11,7 +11,10 @@
     <a href="works/create">Add Stories</a>
     @foreach ($works as $work)
     <div class="m-0 w-full h-14">
-        <a href="works/{{ $work->id }}" class="text-2xl text-center block text-blue-500 underline">{{ $work->title }}</a></br>
+    <tr>
+            <td><a href="works/{{ $work->id }}">{{ $work->title }} <a href="works/delete/{{ $work->id }}">x</a></td>
+            </a></br></td>
+        </tr>
     </div>
     @endforeach
 </body>

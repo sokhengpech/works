@@ -18,6 +18,13 @@ class WorkController extends Controller
         return view('works.create');
     }
 
+    public function delete($id)
+    {
+        $works = Work::find($id);
+        $works->delete();
+        return redirect('works');
+    }
+
 
     public function store(Request $request)
     {
